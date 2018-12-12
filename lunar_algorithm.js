@@ -41,6 +41,12 @@
 // March 31, 2037
 // October 31, 2039
 
+// k = known full moon Cycle get timestamp of add 29.5 days blablah to timestamp, convert back to JS Date, getDate()
+// use getDate() getMonth()
+
+var importantNumber = 255144000
+// milliseconds between each full moon
+
 var moonCycle = 29.5;
 var year = 365;  
 var leapYear = 366;
