@@ -98,6 +98,23 @@ matrix.forEach(row => console.log(row));
 console.log(`The number of paths is ${matrix[numRows - 1][numCols - 1]}`);
 
 
-// createGrid(size, gridArray)
+gridSize = 20;
 
+function findRoutes(gridSize){
+    let routeMatrix = [];
+    for (let i = 1; i <= gridSize; i++) {
+        routeMatrix.push(1)
+    }
+    for (let i = 1; i <= gridSize; i++) {
+        for(let j =1; j < gridSize; j++) {
+            routeMatrix[j] = routeMatrix[j] + routeMatrix[j-1];
+        }
+        routeMatrix[i] = 2 * routeMatrix[i-1];
+    }
+    console.log(routeMatrix)
+    return routeMatrix[gridSize]
+}
+
+n = findRoutes(gridSize)
+console.log(n)
 
