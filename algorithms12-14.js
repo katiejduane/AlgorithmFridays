@@ -103,10 +103,10 @@ gridSize = 20;
 function findRoutes(gridSize){
     let routeMatrix = [];
     for (let i = 1; i <= gridSize; i++) {
-        routeMatrix.push(1)
+        routeMatrix.push(1);
     }
     for (let i = 1; i <= gridSize; i++) {
-        for(let j =1; j < gridSize; j++) {
+        for(let j = 1; j < gridSize; j++) {
             routeMatrix[j] = routeMatrix[j] + routeMatrix[j-1];
         }
         routeMatrix[i] = 2 * routeMatrix[i-1];
