@@ -44,6 +44,34 @@ function insertionSort(array) {
 console.log(insertionSort(initArray))
 
 
+//merge sort
+let merge = (a, b) => {
+    let merged = [];
+    let i = 0;
+    let j = 0;
+    while ((i + j) < (a.length + b.length)) {
+        if (a[i] <= b[j] || !b[j]) {
+            merged.push(a[i]);
+            i++;
+        } else {
+            merged.push(b[j]);
+            j++;
+        }
+    }
+    return merged;
+}
+
+
+let mergeSort = (arr) => {
+    if (arr.length <= 1) return arr;
+    let middle = Math.floor(arr.length / 2);
+    return merge(
+        mergeSort(arr.slice(0, middle)),
+        mergeSort(arr.slice(middle))
+    );
+}
+
+console.log(mergeSort([7, 6, 5, 6, 3]));
 
 
 
