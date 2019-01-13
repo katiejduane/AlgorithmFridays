@@ -1,0 +1,87 @@
+What we did:
+
+Basic examples of longer vs.shorter code
+A sorted list where you guess the number…
+
+Loop through each takes at worst N times where n is the number of numbers.At best, 1
+
+Generate a random number and check that index.
+
+Binary search takes log(N) because we cut the number of remaining numbers to guess against in half each time
+
+The Big Oh
+
+O(1) - constant.Doesn’t matter how many elements, it’s always the same
+
+O(n) - linear.As Element’s increase or decrease, time moves with it
+
+O(n ^ 2) - A simple nested loop.You look at n elements, n times.
+
+    O(n ^ 3, 4, 5, etc.) all fall under this as they are just nested, nested, etc.
+
+        O(log(n)) - curves up fast as you add elements but flattens out the more you increase.Binary search does this.
+
+            O(n log(n)) - In between linear and n ^ 2. It’s log n(above), n times
+
+O(2 ^ n) - Bad.Increases very, very quickly as you add elements.The recursive fibonacci function is an example.Essentially every time you add an element, it doubles the time.
+
+    O(n!) - This is bad.Very bad.If the one above is bad this is very, very, very bad.It increases at an almost uncontrollable rate.The Bogo sort, largely considered the worst functional sort, uses this.Bogo is also called “Monkey sort” because it resembles monkey’s just trying stuff.
+
+        O(n ^ n) - no known example.Evil like the New Orleans Saints.
+
+            O(∞) - Not going to finish in this universe.
+
+For graphs See http://i.stack.imgur.com/Aq09a.png
+
+Sorting as a way of illustrating each
+
+Bubble sort
+Insertion Sort
+QuickSort
+MergeSort
+
+
+
+Links:
+
+Great Big - Oh explanation with examples
+https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
+
+
+Algorithm’s Ranked:
+http://www.cprogramming.com/tutorial/computersciencetheory/sortcomp.html
+
+
+
+Visulizations
+
+MergeSort Vs.QuickSort
+https://www.youtube.com/watch?v=es2T6KY45cA
+
+QuickSort
+https://www.youtube.com/watch?v=aXXWXz5rF64
+
+Heap Sort
+https://www.youtube.com/watch?src_vid=es2T6KY45cA&v=H5kAcmGOn4Q
+
+
+Videos of the algorithms explained
+
+CS50 - BubbleSort, 6: 00
+https://www.youtube.com/watch?v=8Kp-8OGwphY
+
+CS50 - SelectSort, 9: 0 - Really annoying guy
+https://www.youtube.com/watch?v=f8hXR_Hvybo
+
+CS50 - InsertionSort, 9: 00 - Same guy
+https://www.youtube.com/watch?v=DFG-XuyPYUQ
+
+CS50 - Quicksort, 6: 00
+https://www.youtube.com/watch?v=aQiWF4E8flQ
+
+CS50 - MergeSort, 8: 00
+https://www.youtube.com/watch?v=EeQ8pwjQxTM
+
+
+
+

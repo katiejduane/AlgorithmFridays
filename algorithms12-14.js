@@ -17,9 +17,6 @@ for(i = 0; i < productList.length; i++){
     productList2.push(product2)
 }
 
-// console.log(productList2)
-// console.log(productList)
-
 function biggestPal(array) {
     biggestDrome = 0;
     for (var i = 0; i < array.length; i++) {
