@@ -28,10 +28,10 @@ namesArray.forEach((element) => {
 // =================================================== //
 
 const digits = fs.readFileSync('numbers.txt', 'utf8')
-// console.log(digits)
+// console.log(digits) 
 let digitsAsString = digits.split('\n').join('')
 digitsArray = digitsAsString.split('');
-
+  
 let digitsAsNums = []
 for(let i = 0; i < digitsArray.length; i++) {
     digitsAsNums.push(Number(digitsArray[i]))
@@ -43,3 +43,11 @@ for (let i = 0; i < digitsAsNums.length; i++){
 }
 
 console.log(sum)
+
+// Zac's shorter version
+let count = 0;
+for(let i = 0; i < digitsAsNums.length; i++){
+    count += Number(digitsAsNums[i])
+}
+
+console.log(count)
