@@ -56,3 +56,11 @@ function convertPhone(phonestr) {
     console.log(finalArray)
 }
 convertPhone(array)
+
+
+const convertPhone = (input) => {
+    var str = input.replace(/[^\d]/g, '');
+    str = (str[0][0] == 1) ? str.substr(1) : str;
+    return (str.length >= 11) ? `${str.slice(0, 3)}-${str.slice(3, 6)}-${str.slice(6, 11)}` : new Error('invalid number');
+}
+console.log(convertPhone('12798504trumpforprezdlfkgjskld4930685439268-45906'))
