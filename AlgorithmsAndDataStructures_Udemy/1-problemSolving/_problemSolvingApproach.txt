@@ -1,0 +1,46 @@
+PROBLEM SOLVING:
+- understand the problem
+- explore concrete examples
+- break it down
+- solve/simplify
+- look back and refactor
+
+it's worth having a game plan! it will come naturally, with time, but you need to build a solid 
+foundation from which things will eventually come naturally :D 
+
+1. Understanding the problem: take a step back and make sure you understand the problem ahead of you! 
+Here are some questions you can ask yourself:
+- Can I restate the problem in my own words?
+- What are the inputs that go into the problem?
+- What are the outputs that should come from the solution of the problem?
+- Can the outputs be determined from the inputs? In other words, do I have information to solve the problem?
+- How should I label the important pieces of data that are apart of the problem?
+
+2. Explore concrete examples: come up with concrete examples can help you understand the problem better and
+provide sanity checks. User stories, unit tests... Some ideas:
+- Start with SIMPLE examples, with an input and the outputs
+- Progress to more complex examples
+- Then explore edge cases; empty inputs, invalid inputs
+- Example: write a function which takes in a string and returns counts of each character
+
+3. Break it down: explicity write out the steps you need to take!
+- This forces you to think about the code you'll write before you write it, and helps you catch any
+lingering conceptual issues or misunderstandings before you dive in and have to worry about details (ie syntax) as well.
+
+4. Solve or simplify: Solve the problem, if you can't, solve a simpler problem! Ignore the part that's giving
+you a really hard time, and focus on the rest. It's better than making no progress at all! Often, solving a
+simpler problem gives you insight in the more complex parts which might be giving you issues. SIMPLIFY looks like:
+- Find the core difficulty in what you're trying to do
+- Temporarily ignore that difficulty
+- Write a simplified solution
+- Then incorporate that difficulty back in!
+
+5. Look back and refactor: You're not quite done yet! On your own, in your head, or in an interview, outloud,
+it can be VERY GOOD to ask/answer these questions!
+- Can you check the result?
+- Can you derive the result differently?
+- Can you undrstand it, at a glance?
+- Can you use the result or method fro some other problem?
+- Can you improve the performance of your solution?
+- Can you think of other ways to refactor?
+- How have other peopel solved this problem?

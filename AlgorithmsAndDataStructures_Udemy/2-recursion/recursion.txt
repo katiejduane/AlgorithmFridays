@@ -1,0 +1,25 @@
+What is recursion?
+- A process (a function in our case) that calls itself. Not ANOTHER function, itself!
+
+Why do I need to know it!?
+- It's EVERYWHERE! Like... JSON.parse/JSON.stringify are often recursive, document.getElementById and
+DOM traversal algorithms, object traversal, more complex data structures, etc... often these solutions
+involve recursion (because it's simpler/cleaner alternative to iteration)
+
+The Call Stack:
+- IN almost all program languages, there is a built in data steucture that manages what happens when
+functions are invoked. The STACK (call stack in JS) is this structure.
+- When a function is called, it is placed (pushed) on the top of the call stack
+- When JS sees the return keyword, or when the function ends, the compiler will remove (pop) it from the
+top of the stack
+- In a recursive function, you can think of it like: all the functions are piling up and waiting on 
+each other to finish so they can finish themselves...
+
+Where things go wrong:
+- You don't have a base case, or the base case is wrong
+- Forgetting to return, or returning the wrong thing
+- Stack overflow!
+
+Helper Method Recursion:
+Where we have two functions: an OUTER function, and then an INNER function that calls itself 
+(is recursive) within the outer function.
