@@ -16,4 +16,24 @@ function collectOddValues(arr){
 
 let array = [1,2,3,4,5,6,7,8,9,10]
 
-console.log(collectOddValues(array))
+// console.log(collectOddValues(array))
+
+//inventing my own for practice... 
+
+function fourLetterWord(arr){
+    let words = [];
+    function helper(helperInput){
+        if(helperInput.length === 0){
+            return;
+        }
+        if(helperInput[0].length === 4){
+            words.push(helperInput[0]);
+        }
+        helper(helperInput.slice(1));
+    }
+    helper(arr);
+    return words;
+}
+
+let mixedWords = ['blizzard', 'hell', 'wonder', 'ash', 'rain']
+console.log(fourLetterWord(mixedWords));

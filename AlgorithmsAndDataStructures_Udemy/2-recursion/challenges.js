@@ -2,13 +2,20 @@
 // the power of the base to the exponent
 // 2 to the power of 4 = 2*2*2*2
 
-function power(base, exp){
-    if(exp === 1){
-        return base
-    }else{
-        console.log(base, exp)
-        return base * power(base, exp-1)
-    }
+// function power(base, exp){
+//     if(exp === 1){
+//         return base
+//     }else{
+//         console.log(base, exp)
+//         return base * power(base, exp-1)
+//     }
+// }
+
+//the above function works here but fails in tests on udemy...
+
+function power(base, exponent){
+    if(exponent === 0) return 1;
+    return base * power(base,exponent-1);
 }
 
 console.log(power(2,6))
