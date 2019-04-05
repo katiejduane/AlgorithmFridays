@@ -18,4 +18,15 @@ function power(base, exponent){
     return base * power(base,exponent-1);
 }
 
-console.log(power(2,6))
+// console.log(power(2,6))
+
+//reverse a string recursively
+let stringToRev = 'cloud';
+function reverse(str) {
+    if (str.length <= 1) {
+        return str;
+    }
+    return reverse(str.substr(1)) + str[0];
+}
+
+console.log(reverse(stringToRev));
