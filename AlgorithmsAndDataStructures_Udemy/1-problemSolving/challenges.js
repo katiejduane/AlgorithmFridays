@@ -105,3 +105,15 @@ function terrible(arr, num){
 console.log(terrible([1,1,6,3,5,2], 7))
 
 
+function areThereDuplicates() {
+    // good luck. (supply any arguments you deem necessary.)
+}
+
+function isSubsequence() {
+    // good luck. Add any arguments you deem necessary.
+}
+
+
+function findLongestSubstring() {
+    // add whatever parameters you deem necessary - good luck!
+}

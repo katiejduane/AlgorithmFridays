@@ -30,3 +30,26 @@ function reverse(str) {
 }
 
 console.log(reverse(stringToRev));
+
+
+// productOfArray([1,2,3]) // 6
+// productOfArray([1,2,3,10]) // 60
+function productOfArray(arr){
+    
+}
+
+
+// SAMPLE INPUT/OUTPUT
+// recursiveRange(6) // 21
+// recursiveRange(10) // 55 
+function recursiveRange() {
+
+}
+
+// fib(4) // 3
+// fib(10) // 55
+// fib(28) // 317811
+// fib(35) // 9227465
+function fib() {
+    // add whatever parameters you deem necessary - good luck!  
+}
