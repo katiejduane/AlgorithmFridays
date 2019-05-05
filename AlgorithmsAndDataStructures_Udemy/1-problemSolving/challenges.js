@@ -76,44 +76,89 @@ function betterAverage(array, avg){
 
 // console.log(betterAverage([1,2,3,4,5], 2.5))
 
-function terrible(arr, num){
-    let minLen = Infinity;
-    let len = 0;
-    let sum = 0;
-    let i = 0
-    while(i < arr.length){
-        if(sum < num){
-            sum += arr[i]
-            len++
-            i++
-        }
-        if (sum > num) {
-            sum = sum - arr[i - len]
-            len--
-        }
-        if(sum === num){
-            minLen = Math.min(len, minLen)
-        }
-    }
-    if(minLen === Infinity){
-        return 0
-    } else{
-        return minLen
-    }
-}
 
-console.log(terrible([1,1,6,3,5,2], 7))
-
-
+//write a function which accepts a variable number of arguments and checks whether there are any 
+//duplicates among the args passed in. solve this with either the freq counter pattern or mult pointers pattern!
 function areThereDuplicates() {
     // good luck. (supply any arguments you deem necessary.)
 }
 
+//write a function which takes two strings and checks whether the chars in the first string form
+//a subsequence of the chars in the second string. the function should check whether the chars in
+//the first string appear somewhere in the second string, not necessarily all next to eachother, but
+//without their order changing.
 function isSubsequence() {
     // good luck. Add any arguments you deem necessary.
 }
 
 
+//given an array on integers and a number, write a function which fins the maximum sum of a subarray
+//with thelength of the number passed into the function. note that a subarray MUST consist of consecutive
+//elements from the original array!
+function maxSubarraySum(arr, num) {
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+
+
+//write a function called minSUbArrayLen which accepts two params, an array of pos integers and a
+//pos integer. The function should return the minimal length of a contiguous subarray of which the 
+//sum is greater than or equal to the integer passed to the function. if there isn't one, return 0.
+function minSubArrayLen(){
+
+}
+
+
+//write a function that accepts a string and returns the length of the longest substring with all
+//distinct characters.
 function findLongestSubstring() {
     // add whatever parameters you deem necessary - good luck!
 }
+
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+// i think the below function seriously does NOT work...
+// function terrible(arr, num){
+//     let minLen = Infinity;
+//     let len = 0;
+//     let sum = 0;
+//     let i = 0
+//     while(i < arr.length){
+//         if(sum < num){
+//             sum += arr[i]
+//             len++
+//             i++
+//         }
+//         if (sum > num) {
+//             sum = sum - arr[i - len]
+//             len--
+//         }
+//         if(sum === num){
+//             minLen = Math.min(len, minLen)
+//         }
+//     }
+//     if(minLen === Infinity){
+//         return 0
+//     } else{
+//         return minLen
+//     }
+// }
