@@ -121,6 +121,8 @@ function minSubArrayLen(){
 
 //write a function that accepts a string and returns the length of the longest substring with all
 //distinct characters.
+// findLongestSubstring('rithmschool') // 7
+// findLongestSubstring('thisisawesome') // 6
 function findLongestSubstring() {
     // add whatever parameters you deem necessary - good luck!
 }

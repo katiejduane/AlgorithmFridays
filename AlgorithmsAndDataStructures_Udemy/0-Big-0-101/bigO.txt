@@ -1,0 +1,22 @@
+Big O is simplified analyis of an algorithm's efficiency
+
+1. complexity in terms of input size, N
+2. machine-independent
+3. basic computer steps
+4. time & space
+
+Types of measurement:
+worst-case, bet-case, average case. we typically look at worst-case.
+
+Rules:
+1.ignore constants
+2. certain terms dominate others
+
+Complexity Chart, best to worst:
+1. O(log n), O(1) // Constant Time
+2. O(n) // Linear Time
+3. O(n log n) 
+4. O(n^2)
+5. O(2^n)
+6. O(n!)
+
