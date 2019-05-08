@@ -25,36 +25,51 @@ function power(base, exponent){
 // factorial(2) // 2
 // factorial(4) // 24
 // factorial(7) // 5040
-function factorial(num){
-    
+function factorial(num) {
+  if (num <= 1) {
+    return 1;
+  }
+  return num * factorial(num - 1);
 }
+// console.log(factorial(4))
 
 //write a function called productOfArray that takes in array of numsand returns the product of them all!
 // productOfArray([1,2,3]) // 6
 // productOfArray([1,2,3,10]) // 60
-function productOfArray(arr){
 
+let mySillyArr = [1,2,3,3] 
+
+function productOfArray(arr) {
+  if (arr.length === 0) {
+    return 1;
+  }
+  return arr[0] * productOfArray(arr.slice(1));
 }
 
+// console.log(productOfArray(mySillyArr))
 
 
 //write a function called recursive range which accepts a number and adds up all the numbers from 0
 //to the number passed to the function.
 // recursiveRange(6) // 21
 // recursiveRange(10) // 55 
-function recursiveRange(){
-   
+function recursiveRange(num){
+   if (num === 0) return num;
+   return num + recursiveRange(num -1)
 }
+// console.log(recursiveRange(4))
 
 
 //write a function called fib which accepts a number and returns the nth number in the fibonacci
-//sequence. 1,1,2,3,5,8...
+//sequence. 1,1,2,3,5,8,13,21,34,55
 // fib(4) // 3
 // fib(10) // 55
 // fib(28) // 317811
 // fib(35) // 9227465
-function fib(){
-  // add whatever parameters you deem necessary - good luck!  
+
+function fib(n) {
+  if (n <= 2) return 1;
+  return fib(n - 1) + fib(n - 2);
 }
 
-
+console.log(fib(1))

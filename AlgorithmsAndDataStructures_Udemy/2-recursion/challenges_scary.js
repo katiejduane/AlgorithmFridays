@@ -6,7 +6,7 @@ function reverse(str) {
   }
   return reverse(str.substr(1)) + str[0];
 }
-// console.log(reverse(stringToRev));
+console.log(reverse(stringToRev));
 
 
 //write a funtion that returns true if the string passed to it is a palindrome, otherwise returns false
