@@ -15,7 +15,7 @@ console.log(reverse(stringToRev));
 // isPalindrome('tacocat') // true
 // isPalindrome('amanaplanacanalpanama') // true
 // isPalindrome('amanaplanacanalpandemonium') // false
-function isPalindrome(){
+function isPalindrome(str){
   // add whatever parameters you deem necessary - good luck!
 }
 
