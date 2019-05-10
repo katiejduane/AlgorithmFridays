@@ -13,7 +13,6 @@ function order(words) {
                 numFound = Number(wordsArray[i][j]);
                 index = numFound - 1;
                 sortedArray.splice(index, 1, wordsArray[i]);
-                // console.log(numFound, index, sortedArray)
             }
         }
     }

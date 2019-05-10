@@ -80,7 +80,14 @@ function betterAverage(array, avg){
 //write a function which accepts a variable number of arguments and checks whether there are any 
 //duplicates among the args passed in. solve this with either the freq counter pattern or mult pointers pattern!
 function areThereDuplicates() {
-    // good luck. (supply any arguments you deem necessary.)
+  let collection = {};
+  for (let val in arguments) {
+    collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
+  }
+  for (let key in collection) {
+    if (collection[key] > 1) return true;
+  }
+  return false;
 }
 
 //write a function which takes two strings and checks whether the chars in the first string form
