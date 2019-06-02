@@ -96,10 +96,13 @@ function areThereDuplicates(arguments) {
 //a subsequence of the chars in the second string. the function should check whether the chars in
 //the first string appear somewhere in the second string, not necessarily all next to eachother, but
 //without their order changing.
+//isSubsequence('hello', 'hello world') // true
+//isSubsequence('sing', 'string') // true
+//isSubsequence('abc', 'acb') // false (order matters)
 function isSubsequence(str1, str2) {
     // good luck. Add any arguments you deem necessary.
 }
-
+console.log(isSubsequence('hello', 'hello world'))
 
 //given an array on integers and a number, write a function which fins the maximum sum of a subarray
 //with thelength of the number passed into the function. note that a subarray MUST consist of consecutive
