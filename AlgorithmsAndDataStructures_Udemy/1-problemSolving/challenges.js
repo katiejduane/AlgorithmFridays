@@ -79,7 +79,7 @@ function betterAverage(array, avg){
 
 //write a function which accepts a variable number of arguments and checks whether there are any 
 //duplicates among the args passed in. solve this with either the freq counter pattern or mult pointers pattern!
-function areThereDuplicates() {
+function areThereDuplicates(arguments) {
   let collection = {};
   for (let val in arguments) {
     collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
@@ -89,12 +89,14 @@ function areThereDuplicates() {
   }
   return false;
 }
+// console.log(areThereDuplicates())
+
 
 //write a function which takes two strings and checks whether the chars in the first string form
 //a subsequence of the chars in the second string. the function should check whether the chars in
 //the first string appear somewhere in the second string, not necessarily all next to eachother, but
 //without their order changing.
-function isSubsequence() {
+function isSubsequence(str1, str2) {
     // good luck. Add any arguments you deem necessary.
 }
 
@@ -134,40 +136,18 @@ function findLongestSubstring() {
     // add whatever parameters you deem necessary - good luck!
 }
 
+// collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
+
+function makeCounter(input){
+    input = input.toLowerCase();
+    let counter = {}
+    for(letter of input){
+        if(letter != ' '){
+            counter[letter] = (counter[letter] || 0) + 1;
+        }
+    }
+    return counter;
+}
 
 
-
-
-
-//
-//
-//
-//
-//
-//
-// i think the below function seriously does NOT work...
-// function terrible(arr, num){
-//     let minLen = Infinity;
-//     let len = 0;
-//     let sum = 0;
-//     let i = 0
-//     while(i < arr.length){
-//         if(sum < num){
-//             sum += arr[i]
-//             len++
-//             i++
-//         }
-//         if (sum > num) {
-//             sum = sum - arr[i - len]
-//             len--
-//         }
-//         if(sum === num){
-//             minLen = Math.min(len, minLen)
-//         }
-//     }
-//     if(minLen === Infinity){
-//         return 0
-//     } else{
-//         return minLen
-//     }
-// }
+console.log(makeCounter('dollshead trail'))
