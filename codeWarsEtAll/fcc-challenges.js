@@ -53,7 +53,45 @@ function truncateString(str, num) {
 function findElement(arr, func) {
     // let num = 0;
     // return num;
+    let found = arr.find(func)
+    return found;
     
 }
 
-console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+// console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+
+
+function booWho(bool) {
+    if(bool === true || bool === false){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// console.log(booWho(null));
+
+
+// function titleCase(str) {
+//     let arr = str.split(' ')
+//     let res = []
+//     for(word of arr){
+//         let titleCased = word[0].toUpperCase() + word.slice(1).toLowerCase();
+//         res.push(titleCased)
+//     }
+//     return res.join(' ')
+// }
+
+//since free code camp doesn't like for...of loops:
+function titleCase(str) {
+    let arr = str.split(' ')
+    let res = []
+    for(let i = 0; i < arr.length; i++){
+    let titleCased = arr[i][0].toUpperCase() + arr[i].slice(1).toLowerCase();
+    res.push(titleCased)
+    }
+    return res.join(' ')
+}
+
+
+console.log(titleCase("I'm a little tea pot")); //I'm A Little Tea Pot
