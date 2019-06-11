@@ -94,4 +94,44 @@ function titleCase(str) {
 }
 
 
-console.log(titleCase("I'm a little tea pot")); //I'm A Little Tea Pot
+// console.log(titleCase("I'm a little tea pot")); //I'm A Little Tea Pot
+
+
+function frankenSplice(arr1, arr2, n) {
+    // for(item of arr1){
+    //     arr2.splice(n, 0, item)
+    // }
+    let r = arr2.slice();
+    console.log(r)
+    for (let i = 0; i < arr1.length; i++) {
+        r.splice(n + i, 0, arr1[i]);
+    }
+    return r;
+}
+
+// console.log(frankenSplice([1, 2, 3], [4, 5], 1)); 
+
+
+function bouncer(arr) {
+    return arr.filter((value => {
+        if (value !== Boolean){
+            return value;
+        }
+    }))
+}
+
+// console.log(bouncer([false, null, 0, NaN, undefined, ""]));
+
+
+// Return the lowest index at which a value(second argument) should be inserted into an array
+// (first argument) once it has been sorted.The returned value should be a number.
+
+// For example, getIndexToIns([1, 2, 3, 4], 1.5) should return 1 because it is greater than 1(index 0), 
+// but less than 2(index 1). Likewise, getIndexToIns([20, 3, 5], 19) should return 2 because once the 
+// array has been sorted it will look like[3, 5, 20] and 19 is less than 20(index 2) and greater than 5(index 1).
+function getIndexToIns(arr, num) {
+    // Find my place in this sorted array.
+    return num;
+}
+
+getIndexToIns([40, 60], 50);
