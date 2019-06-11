@@ -3,12 +3,10 @@
 
 function findLongestWordLength(str) {
     let strArr = str.split(" ")
-    let wordLen = 0;
-    let longestWord = 0;
+    let longestWord = '';
     for(let i = 0; i < strArr.length; i++){
-        console.log(strArr[i], strArr[i].length)
-        if(wordLen > longestWord){
-            longestWord = wordLen
+        if(strArr[i].length > longestWord.length){
+            longestWord = strArr[i]
         }
     }
     return longestWord;
