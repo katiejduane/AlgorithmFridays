@@ -1,4 +1,4 @@
-// arrays and the spread operator
+// arrays and the spread operator =====================================================>
 
 // let thisArray = [true, true, undefined, false, null];
 // let thatArray = [...thisArray];
@@ -17,7 +17,7 @@ function copyMachine(arr, num) {
 // console.log(copyMachine([true, false, true], 2));
 
 
-// combining arrays with spread operator
+// combining arrays with SPREAD OPERATOR =====================================================>
 let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
 let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 // thatArray now equals ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
@@ -29,7 +29,7 @@ function spreadOut() {
 }
 // console.log(spreadOut());
 
-// INDEX OF PRACTICE
+// INDEX OF PRACTICE =====================================================>
 let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
 
 fruits.indexOf('dates') // returns -1
@@ -40,6 +40,21 @@ function quickCheck(arr, elem) {
     let result = (arr.indexOf(elem) > -1) ? true : false
     return result
 }
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'shrooms'));
+// console.log(quickCheck(['squash', 'onions', 'shallots'], 'shrooms'));
 
 
+function filteredArray(arr, elem) {
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if (arr[i].indexOf(elem) == -1) {
+            newArr.push(arr[i])
+        }
+    }
+    return newArr;
+}
+
+// change code here to test different cases:
+// console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+
+// OBJECTSSSSSSS =====================================================>

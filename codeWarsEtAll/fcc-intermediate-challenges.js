@@ -2,8 +2,11 @@
 // the numbers between them. The lowest number will not always come first.
 
 function sumAll(arr) {
-   let start = (arr[0] > arr[1]) ? arr[0] : arr[1]
-   console.log(start)
+    // let result = (arr[0] > arr[1]);
+    // let start = (result) ? arr[0] : arr[1];
+    // let end = (!result) ? arr[0] : arr[1];
+    let arr = arr.sort()
+    let [start, end] = arr;
 }
 
 sumAll([1, 4]);
