@@ -135,8 +135,7 @@ function getIndexToIns(arr, num) {
     return arr.indexOf(num);
 }
 
-console.log(getIndexToIns([5, 3, 20, 3], 5));
-console.log(getIndexToIns([10, 20, 30, 40, 50], 35))
+// console.log(getIndexToIns([5, 3, 20, 3], 5));
 // getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
 
 
@@ -145,7 +144,49 @@ console.log(getIndexToIns([10, 20, 30, 40, 50], 35))
 // the letters in the second string are present in the first, ignoring case. The arguments["hello", "hey"] 
 // should return false because the string "hello" does not contain a "y".
 function mutation(arr) {
-    return arr;
+    let target = arr[0].toLowerCase();
+    let test = arr[1].toLowerCase();
+    for(let i = 0; i < test.length; i++){
+        if(target.indexOf(test[i]) < 0)
+            return false;
+    }
+    return true;
+}
+// console.log(mutation(["Alien", "line"]));
+
+
+// Write a function that splits an array(first argument) into groups the length of size(second argument) 
+// and returns them as a two - dimensional array.
+function chunkArrayInGroups(arr, size) {
+    let tempArr = [];
+    let finalArray = [];
+    for(let i = 0, j = arr.length; i < j; i += size){
+        tempArr = arr.slice(i, i + size)
+        finalArray.push(tempArr)
+    }
+    return finalArray;
+
+
+    // let temp = [];
+    // let result = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(i, size, i % size)
+    //     if (i % size !== size - 1){
+    //         temp.push(arr[i]);
+    //         // console.log(1, temp);
+    //     } else {
+    //         temp.push(arr[i]);
+    //         // console.log(2, temp)
+    //         result.push(temp);
+    //         temp = [];
+    //     }
+    // }
+    // if (temp.length !== 0)
+    //     result.push(temp);
+    // return result;
 }
 
-console.log(mutation(["hello", "hey"]));
+// console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+// chunkArrayInGroups(["a", "b", "c", "d"], 2) //should return [["a", "b"], ["c", "d"]]
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)) //should return [[0, 1, 2], [3, 4, 5]]
+// chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) //should return [[0, 1, 2, 3], [4, 5]]
