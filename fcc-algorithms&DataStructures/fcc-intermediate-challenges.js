@@ -5,7 +5,7 @@ function sumAll(arr) {
     // let result = (arr[0] > arr[1]);
     // let start = (result) ? arr[0] : arr[1];
     // let end = (!result) ? arr[0] : arr[1];
-    let arr = arr.sort()
+    let arr = arr.sort((a, b) => a - b)
     let [start, end] = arr;
 }
 
