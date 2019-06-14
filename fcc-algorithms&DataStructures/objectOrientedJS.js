@@ -66,5 +66,18 @@ function Dog(name) {
 }
 
 let beagle = new Dog("Snoopy");
-
 Dog.prototype.isPrototypeOf(beagle)
+
+
+// use CLOSURE to protect properties within an object from being modified externally
+function Bird() {
+    let hatchedEgg = 10; // private property, variable created within the constructor function
+
+    this.getHatchedEggCount = function () { // publicly available method that a bird object can use
+        return hatchedEgg;
+    };
+}
+let ducky = new Bird();
+ducky.getHatchedEggCount(); // returns 10
+// in javascript, a function always has access to the context in which it was created, this
+// is called closure.
