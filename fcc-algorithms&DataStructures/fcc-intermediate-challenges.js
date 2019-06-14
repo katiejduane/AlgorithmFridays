@@ -25,7 +25,6 @@ function diffArray(arr1, arr2) {
             newArr.push(joinedArr[i])
         }
     }
-    
     return newArr;
 }
 
@@ -41,5 +40,32 @@ function destroyer(arr) {
     })
     return newArr;
 }
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+// wherefore art thou?
+function whatIsInAName(collection, source) {
+    let sourceKeys = Object.keys(source);
+    return collection.filter(function(obj){
+        for(let i = 0; i < sourceKeys.length; i++){
+            if(!obj.hasOwnProperty(sourceKeys[i]) || obj[sourceKeys[i]] !== source[sourceKeys[i]]){
+                return false;
+            }
+        }
+        return true;
+    });
+}
+
+// console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+
+
+// spinal-tap-case
+function spinalCase(str) {
+    // "It's such a fine line between stupid, and clever."
+    // --David St. Hubbins
+    let arr = str.toLowerCase().split(" ")
+    let spinalString = arr.join("-")
+    return spinalString;
+}
+
+console.log(spinalCase('This Is Spinal Tap'));
