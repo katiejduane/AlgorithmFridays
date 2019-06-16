@@ -63,9 +63,6 @@ function whatIsInAName(collection, source) {
 function spinalCase(str) {
     // "It's such a fine line between stupid, and clever."
     // --David St. Hubbins
-    let arr = str.toLowerCase().split(" ")
-    let spinalString = arr.join("-")
-    return spinalString;
 }
 
 console.log(spinalCase('This Is Spinal Tap'));
