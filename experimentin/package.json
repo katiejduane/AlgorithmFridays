@@ -1,0 +1,17 @@
+{
+  "name": "testing-algorithms",
+  "version": "1.0.0",
+  "description": "practicing algorithms and writing tests for them",
+  "main": "laprimavera.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "eitak enaud",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}
