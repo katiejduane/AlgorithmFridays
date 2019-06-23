@@ -28,10 +28,37 @@ function recurseReverse(str){
 
 
 // make a frequency counter 2 ways
-let toCount = "supercalifragilisticexpialidocious!";
+let toCount = "supercalifragil isticexpialidocious!";
 let moreToCount = "A horse of course!";
 
+function firstCounter(str){
+    let str = str.toLowerCase();
+    let counter = {};
+    for(i = 0; i < str.length; i++){
+        let currLetter = str[i]
+        if (currLetter !== " ") {
+            if (!counter[currLetter]) {
+                counter[currLetter] = 1
+            } else {
+                counter[currLetter] += 1
+            }
+        }
+    }
+    return counter;
+}
+console.log(firstCounter(toCount))
 
+function secondCounter(str){
+    let str = str.toLowerCase();
+    let counter = {};
+    for(letter of str){
+        if(letter !== " "){
+            counter[letter] = (counter[letter] || 0) + 1
+        }
+    }
+    return counter;
+}
+console.log(secondCounter(moreToCount))
 
 // filter out the numbers/non numbers
 let toFilter = [1,3,'h','k',1,7,'b',3,'e'];
