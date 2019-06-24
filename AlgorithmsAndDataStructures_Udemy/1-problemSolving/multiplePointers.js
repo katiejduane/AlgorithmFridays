@@ -42,13 +42,12 @@ function sumZero(arr){
 let vals = [1,2,3,4,4,4,7,7,12,12,13]
 
 function countUniqueValues(arr){
+    debugger
     var i = 0;
     for(let j = 1; j < arr.length; j++){
         if(arr[i] !== arr[j]){
             i++;
-            console.log('before', arr[i], arr[j])
             arr[i] = arr[j]
-            console.log(arr[i], arr[j])
         }
     }
     return i + 1
