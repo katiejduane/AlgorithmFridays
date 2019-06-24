@@ -44,12 +44,11 @@ let vals = [1,2,3,4,4,4,7,7,12,12,13]
 function countUniqueValues(arr){
     var i = 0;
     for(let j = 1; j < arr.length; j++){
-        console.log('x', arr[i], arr[j])
         if(arr[i] !== arr[j]){
-            console.log('uniq', i)
             i++;
+            console.log('before', arr[i], arr[j])
             arr[i] = arr[j]
-            console.log('y', arr[i], arr[j])
+            console.log(arr[i], arr[j])
         }
     }
     return i + 1
